@@ -1,5 +1,5 @@
 from rest_framework import generics, permissions
-from events_api.permissions import IsOwnerOrReadOnly
+from zestforride_api.permissions import IsOwnerOrReadOnly
 from .models import Interested
 from .serializers import InterestedSerializer
 

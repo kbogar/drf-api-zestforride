@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Event
+from interested.models import Interested
 
 
 class EventSerializer(serializers.ModelSerializer):
@@ -10,6 +11,8 @@ class EventSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
+    interested_id = serializers.SerializerMethodField()
+    interested_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         """
@@ -33,10 +36,19 @@ class EventSerializer(serializers.ModelSerializer):
         request = self.context['request']
         return request.user == obj.owner
 
+    def get_interested_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            interested = Interested.objects.filter(
+                owner=user, event=obj
+            ).first()
+            return interested.id if interested else None
+        return None
+
     class Meta:
         model = Event
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name',
             'event_details', 'date', 'time', 'is_owner', 'image', 'profile_id',
-            'profile_image'
+            'profile_image', 'interested_id', 'interested_count',
         ]
