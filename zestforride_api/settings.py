@@ -61,7 +61,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['localhost', 'zest-for-ride.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'zest-for-ride-bf40c62cc6cb.herokuapp.com']
 
 
 # Application definition
