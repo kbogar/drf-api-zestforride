@@ -69,3 +69,5 @@ The following libraries and modules are used in the project and they are located
 
 [Back to top](#table-of-contents)
 
+# Testing
+All testing information can be found in [TESTING.md]()
