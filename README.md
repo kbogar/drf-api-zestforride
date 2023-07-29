@@ -13,6 +13,7 @@ The overall structure of the project was modeled based on Code Institutes [drf-a
 * [Entity Relationship Diagram](#entity-relationship-diagram)
 * [Agile Methodology](#agile-methodology)
 * [Technologies and Tools Used](#technologies-and-tools-used)
+* [Testing](#testing)
 
 # Entity Relationship Diagram
 Before starting the project, I conducted thorough research to define the data models needed for the application. This involved identifying entities, relationships, and creating a comprehensive list of fields and actions required for the app to function correctly. With this information, I built the necessary models, ensuring the application meets its goals.
@@ -70,4 +71,4 @@ The following libraries and modules are used in the project and they are located
 [Back to top](#table-of-contents)
 
 # Testing
-All testing information can be found in [TESTING.md]()
+All testing information can be found in [TESTING.md](https://github.com/kbogar/drf-api-zestforride/blob/main/TESTING.md)
