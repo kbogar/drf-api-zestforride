@@ -174,6 +174,10 @@
 ### Contact
 - Logged in user can create a contact message
 
+![](/docs/contact_list.png)
+
+![](/docs/contact_list_loggedin.png)
+
 ### Events 
 - List View (Read, Create if logged in)
 - List View (Read if not logged in)
@@ -208,6 +212,10 @@
 - Detail View (Read, Update, Delete if owner)
 - Detail View (Read if not owner)
 - Detail View (Read if not logged in)
+
+![](/docs/posts_loggedout.png)
+
+![](/docs/posts_loggedinowner.png)
 
 ### Profile
 - List View (Read if logged in)
