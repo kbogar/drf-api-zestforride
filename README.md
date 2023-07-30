@@ -14,6 +14,9 @@ The overall structure of the project was modeled based on Code Institutes [drf-a
 * [Agile Methodology](#agile-methodology)
 * [Technologies and Tools Used](#technologies-and-tools-used)
 * [Testing](#testing)
+* [Bugs](#bugs)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
 # Entity Relationship Diagram
 Before starting the project, I conducted thorough research to define the data models needed for the application. This involved identifying entities, relationships, and creating a comprehensive list of fields and actions required for the app to function correctly. With this information, I built the necessary models, ensuring the application meets its goals.
@@ -32,6 +35,7 @@ Agile Methodology proved invaluable for my project. Breaking it into smaller tas
 [Back to top](#table-of-contents)
 
 # Technologies and Tools Used
+- [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) - to create a Github repository.
 - [Python](https://www.python.org/) - The functionality for the DRF backend framework.
 - [Django](https://www.djangoproject.com/) - Python Web Framework.
 - [Django Rest Framework](https://www.django-rest-framework.org/) - Django REST framework is a powerful and flexible toolkit for building Web APIs.
@@ -72,3 +76,132 @@ The following libraries and modules are used in the project and they are located
 
 # Testing
 All testing information can be found in [TESTING.md](https://github.com/kbogar/drf-api-zestforride/blob/main/TESTING.md)
+
+# Bugs
+I encountered a few errors during the coding of my project and there were fixed throughout the development.
+
+## Solved
+- I had an issue when I started to connect the frontend React app with the backend API at the Profile detail page, the events count didn't work correctly. The problem was I forgot add the events_count to API, so I solved the issue by adding it to the correct app classes.
+<details
+>
+<summary>Click to view screenshots</summary>
+
+![](/docs/events%20count%20issue.PNG)
+
+![](/docs/events%20count%20issue2.png)
+
+![](/docs/events%20count%20issue3.png)
+
+![](/docs/events%20count%20issue4.png)
+
+</details>
+
+<br>
+
+## Unsolved
+At the moment there are no known bugs left to solve.
+
+# Deployment
+This project is deployed using [Heroku](https://www.heroku.com).
+- Before deployment I created a env.py file in Gitpod. This file contains all the sensitive information that we must not push to Github. So I added env.py to .gitignore file.
+- Modify settings.py to make django project aware of the env.py file.
+- Created a requirements.txt containing the necessary libraries and modules for the app to run properly.
+- Also created Procfile, this tells Heroku how to run this project.
+
+The steps for deploying through Heroku are as follows:
+- Go to Heroku website and log in.
+- Go to Dashboard, click on 'New' and 'Create New App'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/docs/heroku1.png)
+
+</details>
+
+<br>
+
+- Add name for your app and choose region.
+- Then click 'Create app'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/docs/heroku2.png)
+
+</details>
+
+<br>
+
+- Navigate to 'Deploy' tab and choose 'Connect to Github'.
+- Search for your repository that you want to deploy.
+- Click 'Connect'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/docs/heroku3.png)
+
+</details>
+
+<br>
+
+- You can choose if you want manual or automatic deployment.
+- Choose Main Branch and click 'Deploy Branch'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/docs/heroku4.png)
+
+</details>
+
+<br>
+
+- When the deployment is succesfully finished, go to Settings tab.
+- Click on 'Reveal Config Vars'.
+- Add the necessary variables; `CLOUDINARY_URL`, `DATABASE_URL`, `PORT`, `SECRET_KEY`, `ALLOWED_HOST`, `CLIENT_ORIGIN`,...
+- Click 'Open app'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/docs/heroku5.png)
+
+</details>
+
+<br>
+
+## Forking the GitHub Repository
+Forking allows you to view and edit the code without affecting the original repository.
+- Navigate to GitHub repository.
+- Click on 'Fork' in the top right corner.
+- This will take you to your own repository to fork with the same name as the original branch.
+
+## Creating Local Clone
+Steps to create a local clone:
+- Click on the code tab under the repository name.
+- Then click 'Code' button to the right above the files listed.
+- Click on clipboard icon to copy the URL.
+
+[Back to top](#table-of-contents)
+
+# Credits
+## Content
+- [Django](https://www.djangoproject.com/) for general tips and how to.
+- 'Django Rest Framework' walkthrough project on how to setup the whole code environment, models, views, etc.
+- [Slack](https://slack.com/) for any issues and questions.
+- [W3CSchool](https://www.w3schools.com/) for general and helpful tips.
+- [Stack Overflow](https://stackoverflow.com/) when I was stucked and needed help with code.
+
+# Acknowledgements
+- This project was built as a part of the Full Stack Software Development education at [Code Institute](https://codeinstitute.net/).
+- My mentor Spencer Barriball for the guidance and encouragement.
+- My Wifi thank you for all the support.
+
+[Back to top](#table-of-contents)
