@@ -7,7 +7,8 @@ Zest For Ride API provides a backend database to have a complete CRUD(create, re
 The overall structure of the project was modeled based on Code Institutes [drf-api](https://github.com/Code-Institute-Solutions/drf-api) walkthrough, with additional functionality added by me.
 
 - [Deployed Zest For Ride API](https://zest-for-ride-bf40c62cc6cb.herokuapp.com/)
-- [Deployed Zest For Ride Frontend website](https://zestforride-51d93abad130.herokuapp.com/)
+- [Deployed Zest For Ride Frontend webapp](https://zestforride-51d93abad130.herokuapp.com/)
+- [Frontend Repository](https://github.com/kbogar/zestforride)
 
 # Table of Contents
 * [Entity Relationship Diagram](#entity-relationship-diagram)
